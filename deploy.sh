@@ -14,15 +14,15 @@ fi
 
 # Parar contenedores existentes
 echo "🛑 Parando contenedores existentes..."
-docker-compose -f docker-compose.prod.yml down
+docker compose -f docker-compose.prod.yml down
 
 # Construir imágenes
 echo "🔨 Construyendo imágenes..."
-docker-compose -f docker-compose.prod.yml build --no-cache
+docker compose -f docker-compose.prod.yml build --no-cache
 
 # Iniciar servicios
 echo "🌟 Iniciando servicios..."
-docker-compose -f docker-compose.prod.yml --env-file .env.prod.local up -d
+docker compose -f docker-compose.prod.yml --env-file .env.prod.local up -d
 
 # Esperar a que los servicios estén listos
 echo "⏳ Esperando a que los servicios estén listos..."
@@ -30,12 +30,12 @@ sleep 30
 
 # Verificar estado de los contenedores
 echo "📊 Estado de los contenedores:"
-docker-compose -f docker-compose.prod.yml ps
+docker compose -f docker-compose.prod.yml ps
 
 # Mostrar logs si hay errores
 if [ $? -ne 0 ]; then
     echo "❌ Error en el despliegue. Mostrando logs:"
-    docker-compose -f docker-compose.prod.yml logs
+    docker compose -f docker-compose.prod.yml logs
     exit 1
 fi
 
