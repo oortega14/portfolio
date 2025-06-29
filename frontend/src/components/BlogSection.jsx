@@ -37,7 +37,15 @@ const BlogSection = () => {
       try {
         setLoading(true);
         const { data } = await apiGet('/blogs');
+        console.log('📋 Raw API response:', data);
         console.log(`✅ Blogs fetched successfully for ${currentLang}`);
+        
+        // Verificar que data sea un array
+        if (!Array.isArray(data)) {
+          console.error('❌ API response is not an array:', data);
+          setError('Invalid data format received from server');
+          return;
+        }
         
         const publishedBlogs = data
           .filter(blog => blog.published)
@@ -47,6 +55,7 @@ const BlogSection = () => {
         lastFetchLang.current = currentLang;
       } catch (error) {
         console.error('❌ Error fetching blogs:', error);
+        console.error('Error details:', error.response?.data || error.message);
         setError('Failed to load blog posts');
       } finally {
         setLoading(false);

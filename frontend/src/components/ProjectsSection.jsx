@@ -37,7 +37,15 @@ const ProjectsSection = () => {
       try {
         setLoading(true);
         const { data } = await apiGet('/projects');
+        console.log('📋 Raw API response:', data);
         console.log(`✅ Projects fetched successfully for ${currentLang}`);
+        
+        // Verificar que data sea un array
+        if (!Array.isArray(data)) {
+          console.error('❌ API response is not an array:', data);
+          setError('Invalid data format received from server');
+          return;
+        }
         
         // Solo mostrar proyectos publicados
         const publishedProjects = data.filter(project => project.published);
@@ -45,6 +53,7 @@ const ProjectsSection = () => {
         lastFetchLang.current = currentLang;
       } catch (error) {
         console.error('❌ Error fetching projects:', error);
+        console.error('Error details:', error.response?.data || error.message);
         setError('Failed to load projects');
       } finally {
         setLoading(false);
