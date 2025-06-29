@@ -22,9 +22,6 @@ RUN if [ -f pnpm-lock.yaml ]; then \
         npm run build; \
     fi
 
-# Install serve to serve static files
-RUN npm install -g serve
-
 # Expose port
 EXPOSE $PORT
 
@@ -32,5 +29,5 @@ EXPOSE $PORT
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT:-3000} || exit 1
 
-# Serve the built application
-CMD ["sh", "-c", "serve -s dist -l ${PORT:-3000}"]
+# Use Vite preview server
+CMD ["sh", "-c", "if [ -f pnpm-lock.yaml ]; then pnpm run preview; else npm run preview; fi"]
