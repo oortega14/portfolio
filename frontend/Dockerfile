@@ -10,7 +10,7 @@ COPY package*.json pnpm-lock.yaml* ./
 RUN if [ -f pnpm-lock.yaml ]; then \
         npm install -g pnpm && pnpm install --frozen-lockfile; \
     else \
-        npm ci --only=production; \
+        npm ci; \
     fi
 
 # Copy source code
