@@ -30,23 +30,23 @@ const ProjectsSection = () => {
 
     const fetchProjects = async () => {
       if (fetchInProgress.current) return;
-      
+
       fetchInProgress.current = true;
       console.log(`🚀 Fetching projects for language: ${currentLang}`);
-      
+
       try {
         setLoading(true);
         const { data } = await apiGet('/projects');
         console.log('📋 Raw API response:', data);
         console.log(`✅ Projects fetched successfully for ${currentLang}`);
-        
+
         // Verificar que data sea un array
         if (!Array.isArray(data)) {
           console.error('❌ API response is not an array:', data);
           setError('Invalid data format received from server');
           return;
         }
-        
+
         // Solo mostrar proyectos publicados
         const publishedProjects = data.filter(project => project.published);
         setProjects(publishedProjects);

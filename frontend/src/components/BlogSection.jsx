@@ -30,27 +30,27 @@ const BlogSection = () => {
 
     const fetchBlogs = async () => {
       if (fetchInProgress.current) return;
-      
+
       fetchInProgress.current = true;
       console.log(`🚀 Fetching blogs for language: ${currentLang}`);
-      
+
       try {
         setLoading(true);
         const { data } = await apiGet('/blogs');
         console.log('📋 Raw API response:', data);
         console.log(`✅ Blogs fetched successfully for ${currentLang}`);
-        
+
         // Verificar que data sea un array
         if (!Array.isArray(data)) {
           console.error('❌ API response is not an array:', data);
           setError('Invalid data format received from server');
           return;
         }
-        
+
         const publishedBlogs = data
           .filter(blog => blog.published)
           .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-        
+
         setPosts(publishedBlogs);
         lastFetchLang.current = currentLang;
       } catch (error) {
@@ -105,8 +105,8 @@ const BlogSection = () => {
       <section className="min-h-screen py-8 px-4 flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-400 mb-4">{error}</p>
-          <button 
-            onClick={() => window.location.reload()} 
+          <button
+            onClick={() => window.location.reload()}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           >
             {t('common.retry')}
@@ -139,7 +139,7 @@ const BlogSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('blog.title')}
           </h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -169,15 +169,15 @@ const BlogSection = () => {
                     <span>{formatDate(post.published_at)}</span>
                     <span>{post.reading_time || '5 min read'}</span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {post.title}
                   </h3>
-                  
+
                   <p className="text-slate-300 text-sm leading-relaxed mb-4">
                     {post.excerpt || post.content?.substring(0, 150) + '...'}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {post.tags && post.tags.map((tag, tagIndex) => (
                       <span
@@ -189,7 +189,7 @@ const BlogSection = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <motion.div
                   className="flex items-center text-blue-400 text-sm font-semibold"
                   whileHover={{ x: 5 }}

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
-    ? '/api/v1'
+    ? 'https://portfolio-backend.hnlvd5.easypanel.host/api/v1'
     : 'http://localhost:3000/api/v1');
 
 const api = axios.create({
@@ -37,7 +37,7 @@ api.interceptors.response.use(
       data: error.response?.data,
       message: error.message
     });
-    
+
     if (error.response && error.response.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
@@ -47,7 +47,7 @@ api.interceptors.response.use(
   }
 );
 
-// Temporal para verificar
+// Temporal para verificar - updated
 console.log('Environment:', {
   MODE: import.meta.env.MODE,
   DEV: import.meta.env.DEV,
