@@ -5,9 +5,8 @@ const API_BASE_URL = import.meta.env.VITE_API_URL ||
     ? '/api/v1'
     : 'http://localhost:3000/api/v1');
 
-// Forzar la URL correcta si VITE_API_URL es una ruta relativa
 const finalApiUrl = API_BASE_URL.startsWith('/')
-  ? 'https://portfolio-backend.hnlvd5.easypanel.host/api/v1'
+  ? 'https://www.oortega14.com/api/v1'
   : API_BASE_URL;
 
 const api = axios.create({
