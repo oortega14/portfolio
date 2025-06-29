@@ -2,11 +2,16 @@ import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD
-    ? 'https://portfolio-backend.hnlvd5.easypanel.host/api/v1'
+    ? '/api/v1'
     : 'http://localhost:3000/api/v1');
 
+// Forzar la URL correcta si VITE_API_URL es una ruta relativa
+const finalApiUrl = API_BASE_URL.startsWith('/')
+  ? 'https://portfolio-backend.hnlvd5.easypanel.host/api/v1'
+  : API_BASE_URL;
+
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: finalApiUrl,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -53,7 +58,8 @@ console.log('Environment:', {
   DEV: import.meta.env.DEV,
   PROD: import.meta.env.PROD,
   VITE_API_URL: import.meta.env.VITE_API_URL,
-  API_BASE_URL: API_BASE_URL
+  API_BASE_URL: API_BASE_URL,
+  FINAL_API_URL: finalApiUrl
 });
 
 export default api;
