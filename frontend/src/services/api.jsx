@@ -6,7 +6,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL ||
     : 'http://localhost:3000/api/v1');
 
 const finalApiUrl = API_BASE_URL.startsWith('/')
-  ? 'https://www.oortega14.com/api/v1'
+  ? 'https://api.oortega14.com/api/v1'
   : API_BASE_URL;
 
 const api = axios.create({
