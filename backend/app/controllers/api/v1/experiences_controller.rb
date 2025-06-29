@@ -15,7 +15,6 @@ class Api::V1::ExperiencesController < ApplicationController
 
   # POST /experiences
   def create
-    debugger
     @experience = Experience.new(experience_params)
     @experience.user_id = current_user.id
 
