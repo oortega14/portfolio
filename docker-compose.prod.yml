@@ -11,7 +11,7 @@ services:
       - "443:443"
     environment:
       - PORT=80
-      - VITE_API_URL=https://tu-dominio.com/api
+      - VITE_API_URL=${VITE_API_URL}
     networks:
       - portfolio-network
     depends_on:
@@ -32,10 +32,9 @@ services:
     environment:
       - RAILS_ENV=production
       - BINDING=0.0.0.0
-      - CORS_ORIGINS=https://tu-dominio.com
-      - DATABASE_URL=postgresql://portfolio_user:portfolio_pass@postgres:5432/portfolio_production
-      - RAILS_MASTER_KEY_FILE=/rails/config/master.key
-      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - CORS_ORIGINS=https://${DOMAIN}
+      - DATABASE_URL=postgresql://portfolio_user:${POSTGRES_PASSWORD}@postgres:5432/portfolio_production
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
     networks:
       - portfolio-network
     depends_on:

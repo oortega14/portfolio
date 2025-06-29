@@ -20,10 +20,11 @@ nano .env.prod.local
 ```
 
 Configura:
-- `SECRET_KEY_BASE`: Genera con `openssl rand -hex 64`
+- `RAILS_MASTER_KEY`: Tu master key de Rails (ya la tienes en `config/master.key`)
 - `POSTGRES_PASSWORD`: Contraseña segura para PostgreSQL
 - `DOMAIN`: Tu dominio (ej: miportfolio.com)
 - `EMAIL`: Tu email para Let's Encrypt
+- `VITE_API_URL`: URL de tu API (ej: https://miportfolio.com/api)
 
 ### 2. Configurar SSL (opcional pero recomendado)
 
