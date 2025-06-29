@@ -50,6 +50,9 @@ CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 # Stage 3: Production stage
 FROM nginx:alpine AS production
 
+# Remove default nginx files
+RUN rm -rf /usr/share/nginx/html/*
+
 # Copy built assets from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
