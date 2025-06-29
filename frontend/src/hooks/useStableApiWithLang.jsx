@@ -16,7 +16,6 @@ export const useStableApiWithLang = () => {
         lang: currentLangRef.current,
         ...config.params
       };
-      console.log(`📡 API GET: ${url} with lang: ${currentLangRef.current}`);
       return api.get(url, { ...config, params });
     };
 

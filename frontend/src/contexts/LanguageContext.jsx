@@ -30,7 +30,6 @@ export const LanguageProvider = ({ children }) => {
   const changeLanguage = useCallback((newLang) => {
     if (isUpdatingRef.current) return;
 
-    console.log(`🌐 Changing language to: ${newLang}`);
     isUpdatingRef.current = true;
 
     // Cambiar en i18next
@@ -67,15 +66,8 @@ export const LanguageProvider = ({ children }) => {
     initTimeoutRef.current = setTimeout(() => {
       const langFromUrl = getCurrentLanguage();
 
-      console.log(`🚀 Initializing language context`, {
-        langFromUrl,
-        'i18n.language': i18n.language,
-        'location.search': location.search
-      });
-
       if (langFromUrl && ['en', 'es'].includes(langFromUrl)) {
         if (i18n.language !== langFromUrl) {
-          console.log(`🔄 Setting i18n language to: ${langFromUrl}`);
           i18n.changeLanguage(langFromUrl);
         }
       } else {

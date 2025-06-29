@@ -51,14 +51,4 @@ api.interceptors.response.use(
   }
 );
 
-// Temporal para verificar - updated
-console.log('Environment:', {
-  MODE: import.meta.env.MODE,
-  DEV: import.meta.env.DEV,
-  PROD: import.meta.env.PROD,
-  VITE_API_URL: import.meta.env.VITE_API_URL,
-  API_BASE_URL: API_BASE_URL,
-  FINAL_API_URL: finalApiUrl
-});
-
 export default api;

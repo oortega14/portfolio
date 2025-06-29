@@ -18,13 +18,11 @@ const ProjectsSection = () => {
   useEffect(() => {
     // No hacer fetch hasta que el contexto esté inicializado
     if (!isInitialized) {
-      console.log('❌ Context not initialized yet');
       return;
     }
 
     // Evitar fetch si ya está en progreso o es el mismo idioma
     if (fetchInProgress.current || lastFetchLang.current === currentLang) {
-      console.log('❌ Fetch already in progress or same language');
       return;
     }
 
@@ -32,17 +30,13 @@ const ProjectsSection = () => {
       if (fetchInProgress.current) return;
 
       fetchInProgress.current = true;
-      console.log(`🚀 Fetching projects for language: ${currentLang}`);
 
       try {
         setLoading(true);
         const { data } = await apiGet('/projects');
-        console.log('📋 Raw API response:', data);
-        console.log(`✅ Projects fetched successfully for ${currentLang}`);
 
         // Verificar que data sea un array
         if (!Array.isArray(data)) {
-          console.error('❌ API response is not an array:', data);
           setError('Invalid data format received from server');
           return;
         }
@@ -67,8 +61,6 @@ const ProjectsSection = () => {
   // Reset cuando cambia el idioma
   useEffect(() => {
     if (lastFetchLang.current && lastFetchLang.current !== currentLang) {
-      console.log(`🔄 Language changed from ${lastFetchLang.current} to ${currentLang}`);
-      // Reset para permitir nuevo fetch
       fetchInProgress.current = false;
     }
   }, [currentLang]);

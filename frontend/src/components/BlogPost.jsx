@@ -21,14 +21,12 @@ const BlogPost = () => {
   useEffect(() => {
     // No hacer fetch hasta que el contexto esté inicializado
     if (!isInitialized || !slug) {
-      console.log('❌ Context not initialized yet or no slug');
       return;
     }
 
     // Evitar fetch si ya está en progreso o son los mismos parámetros
     if (fetchInProgress.current || 
         (lastFetchLang.current === currentLang && lastFetchSlug.current === slug)) {
-      console.log('❌ Fetch already in progress or same parameters');
       return;
     }
 
@@ -36,12 +34,10 @@ const BlogPost = () => {
       if (fetchInProgress.current) return;
       
       fetchInProgress.current = true;
-      console.log(`🚀 Fetching blog post: ${slug} for language: ${currentLang}`);
       
       try {
         setLoading(true);
         const { data } = await apiGet(`/blogs/${slug}`);
-        console.log(`✅ Blog post fetched successfully for ${currentLang}`);
         
         setPost(data);
         setError(null);
@@ -64,7 +60,6 @@ const BlogPost = () => {
   useEffect(() => {
     if ((lastFetchLang.current && lastFetchLang.current !== currentLang) ||
         (lastFetchSlug.current && lastFetchSlug.current !== slug)) {
-      console.log(`🔄 Parameters changed - Lang: ${lastFetchLang.current} -> ${currentLang}, Slug: ${lastFetchSlug.current} -> ${slug}`);
       // Reset para permitir nuevo fetch
       fetchInProgress.current = false;
     }

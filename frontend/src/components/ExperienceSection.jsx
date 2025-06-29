@@ -18,13 +18,11 @@ const ExperienceSection = () => {
   useEffect(() => {
     // No hacer fetch hasta que el contexto esté inicializado
     if (!isInitialized) {
-      console.log('❌ Context not initialized yet');
       return;
     }
 
     // Evitar fetch si ya está en progreso o es el mismo idioma
     if (fetchInProgress.current || lastFetchLang.current === currentLang) {
-      console.log('❌ Fetch already in progress or same language');
       return;
     }
 
@@ -32,12 +30,10 @@ const ExperienceSection = () => {
       if (fetchInProgress.current) return;
       
       fetchInProgress.current = true;
-      console.log(`🚀 Fetching experiences for language: ${currentLang}`);
       
       try {
         setLoading(true);
         const { data } = await apiGet('/experiences');
-        console.log(`✅ Experiences fetched successfully for ${currentLang}`);
         
         // Ordenar por posición o por fecha de inicio (más reciente primero)
         const sortedExperiences = data.sort((a, b) => {
@@ -64,8 +60,6 @@ const ExperienceSection = () => {
   // Reset cuando cambia el idioma
   useEffect(() => {
     if (lastFetchLang.current && lastFetchLang.current !== currentLang) {
-      console.log(`🔄 Language changed from ${lastFetchLang.current} to ${currentLang}`);
-      // Reset para permitir nuevo fetch
       fetchInProgress.current = false;
     }
   }, [currentLang]);
