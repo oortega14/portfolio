@@ -1,9 +1,6 @@
 class Experience < ApplicationRecord
   # Associations
   belongs_to :user
-  has_many :projects, dependent: :destroy
-  has_many :blogs, dependent: :destroy
-  has_many :certifications, dependent: :destroy
 
   # Attributes
   attr_accessor :duration
