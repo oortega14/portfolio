@@ -57,6 +57,7 @@ experiences = [
     current: true,
     location: 'Remote',
     website_url: 'https://www.fuzati.com',
+    company_logo_url: 'https://pbs.twimg.com/profile_images/1625902087644102657/-oa1nwiq_400x400.jpg',
     position: 1,
     user: user
   },
@@ -88,6 +89,7 @@ experiences = [
     current: false,
     location: 'Remote',
     website_url: 'https://www.gft.com',
+    company_logo_url: 'https://pbs.twimg.com/profile_images/1871207685812568064/M_rT_g3X_400x400.jpg',
     position: 2,
     user: user
   },
@@ -118,7 +120,8 @@ experiences = [
     end_date: Date.new(2023, 3, 31),
     current: false,
     location: 'Remote',
-    website_url: 'https://www.iswo.co',
+    website_url: 'https://www.iswo.com.co',
+    company_logo_url: 'https://iswo.com.co/wp-content/uploads/2024/05/Favicon-SIG-ISWO.png',
     position: 3,
     user: user
   },
@@ -149,6 +152,8 @@ experiences = [
     end_date: Date.new(2021, 10, 31),
     current: false,
     location: 'Remote',
+    website_url: 'https://www.oortega14.com/projects?lang=en',
+    company_logo_url: 'https://img.freepik.com/vector-gratis/muestra-logo-abstracto-degradado_23-2148158912.jpg',
     position: 4,
     user: user
   }
