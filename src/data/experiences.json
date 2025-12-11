@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "position": 1,
+    "company": "Tu Empresa Actual",
+    "job_title": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack"
+    },
+    "description": {
+      "en": "Developing web applications using modern technologies and frameworks.",
+      "es": "Desarrollo de aplicaciones web utilizando tecnologías y frameworks modernos."
+    },
+    "start_date": "2024-01-01",
+    "end_date": null,
+    "location": "Remote",
+    "company_url": "https://example.com",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Docker"]
+  },
+  {
+    "id": 2,
+    "position": 2,
+    "company": "Empresa Anterior",
+    "job_title": {
+      "en": "Frontend Developer",
+      "es": "Desarrollador Frontend"
+    },
+    "description": {
+      "en": "Built responsive user interfaces and improved user experience.",
+      "es": "Construí interfaces de usuario responsivas y mejoré la experiencia de usuario."
+    },
+    "start_date": "2022-06-01",
+    "end_date": "2023-12-31",
+    "location": "City, Country",
+    "company_url": null,
+    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+  }
+]

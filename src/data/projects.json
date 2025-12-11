@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Portfolio Website",
+      "es": "Sitio Web de Portafolio"
+    },
+    "description": {
+      "en": "A modern portfolio website built with React and Vite, featuring smooth animations and responsive design.",
+      "es": "Un sitio web de portafolio moderno construido con React y Vite, con animaciones suaves y diseño responsivo."
+    },
+    "technologies": ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    "github_url": "https://github.com/yourusername/portfolio",
+    "live_url": "https://yourportfolio.com",
+    "image_url": null,
+    "published": true,
+    "featured": true,
+    "position": 1
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "E-commerce Platform",
+      "es": "Plataforma de Comercio Electrónico"
+    },
+    "description": {
+      "en": "Full-stack e-commerce solution with payment integration and inventory management.",
+      "es": "Solución de comercio electrónico full-stack con integración de pagos y gestión de inventario."
+    },
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+    "github_url": "https://github.com/yourusername/ecommerce",
+    "live_url": null,
+    "image_url": null,
+    "published": true,
+    "featured": true,
+    "position": 2
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Task Management App",
+      "es": "Aplicación de Gestión de Tareas"
+    },
+    "description": {
+      "en": "Collaborative task management application with real-time updates and team features.",
+      "es": "Aplicación de gestión de tareas colaborativa con actualizaciones en tiempo real y funciones de equipo."
+    },
+    "technologies": ["React", "Firebase", "Material-UI"],
+    "github_url": "https://github.com/yourusername/taskapp",
+    "live_url": "https://taskapp.example.com",
+    "image_url": null,
+    "published": true,
+    "featured": false,
+    "position": 3
+  }
+]
