@@ -25,8 +25,8 @@ const Navigation = () => {
 
   const tabs = [
     { id: 'home', label: t('nav.home'), icon: User, path: '/' },
+    { id: 'experience', label: t('nav.experience'), icon: Briefcase, path: '/experience' },
     { id: 'projects', label: t('nav.projects'), icon: Code, path: '/projects' },
-    { id: 'experience', label: t('nav.experience'), icon: Briefcase, path: '/experience' }
   ];
 
   const toggleLanguage = () => {

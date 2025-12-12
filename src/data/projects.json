@@ -2,17 +2,25 @@
   {
     "id": 1,
     "title": {
-      "en": "Portfolio Website",
-      "es": "Sitio Web de Portafolio"
+      "en": "Real-Time Collaborative Workspace",
+      "es": "Espacio de Trabajo Colaborativo en Tiempo Real"
     },
     "description": {
-      "en": "A modern portfolio website built with React and Vite, featuring smooth animations and responsive design.",
-      "es": "Un sitio web de portafolio moderno construido con React y Vite, con animaciones suaves y diseño responsivo."
+      "en": "A collaborative workspace platform similar to Notion, featuring real-time document editing, kanban boards, and team collaboration tools. Users can create workspaces, invite team members, and collaborate on documents with live cursors and presence indicators. Includes rich text editing, file uploads, comments, and role-based permissions.",
+      "es": "Una plataforma de espacio de trabajo colaborativo similar a Notion, con edición de documentos en tiempo real, tableros kanban y herramientas de colaboración en equipo. Los usuarios pueden crear espacios de trabajo, invitar miembros del equipo y colaborar en documentos con cursores en vivo e indicadores de presencia. Incluye edición de texto enriquecido, carga de archivos, comentarios y permisos basados en roles."
     },
-    "technologies": ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    "github_url": "https://github.com/yourusername/portfolio",
-    "live_url": "https://yourportfolio.com",
-    "image_url": null,
+    "technologies": [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "PostgreSQL",
+      "Redis",
+      "Lexical/Slate",
+      "Tailwind CSS"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "image_url": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
     "published": true,
     "featured": true,
     "position": 1
@@ -20,17 +28,26 @@
   {
     "id": 2,
     "title": {
-      "en": "E-commerce Platform",
-      "es": "Plataforma de Comercio Electrónico"
+      "en": "API Marketplace & Developer Hub",
+      "es": "Marketplace de APIs y Hub para Desarrolladores"
     },
     "description": {
-      "en": "Full-stack e-commerce solution with payment integration and inventory management.",
-      "es": "Solución de comercio electrónico full-stack con integración de pagos y gestión de inventario."
+      "en": "A comprehensive marketplace for discovering, testing, and integrating APIs. Features include API documentation with interactive playground, usage analytics, rate limiting, API key management, monetization with subscription tiers, and developer analytics dashboard. Includes a rating and review system, code snippets in multiple languages, and webhook management.",
+      "es": "Un marketplace completo para descubrir, probar e integrar APIs. Incluye documentación de API con playground interactivo, análisis de uso, limitación de tasa, gestión de claves API, monetización con niveles de suscripción y panel de análisis para desarrolladores. Incluye un sistema de calificación y reseñas, fragmentos de código en múltiples lenguajes y gestión de webhooks."
     },
-    "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    "github_url": "https://github.com/yourusername/ecommerce",
+    "technologies": [
+      "Next.js",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Redis",
+      "Stripe",
+      "GraphQL",
+      "Docker",
+      "AWS"
+    ],
+    "github_url": null,
     "live_url": null,
-    "image_url": null,
+    "image_url": "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
     "published": true,
     "featured": true,
     "position": 2
@@ -38,19 +55,112 @@
   {
     "id": 3,
     "title": {
-      "en": "Task Management App",
-      "es": "Aplicación de Gestión de Tareas"
+      "en": "DevOps Monitoring Dashboard",
+      "es": "Panel de Monitoreo DevOps"
     },
     "description": {
-      "en": "Collaborative task management application with real-time updates and team features.",
-      "es": "Aplicación de gestión de tareas colaborativa con actualizaciones en tiempo real y funciones de equipo."
+      "en": "A comprehensive monitoring and observability platform for developers and DevOps teams. Track application performance, server metrics, error tracking with stack traces, uptime monitoring, and custom alerts. Features include real-time logs aggregation, distributed tracing, custom dashboards with drag-and-drop widgets, incident management, and integration with GitHub, GitLab, Slack, and PagerDuty.",
+      "es": "Una plataforma completa de monitoreo y observabilidad para desarrolladores y equipos DevOps. Rastrea el rendimiento de aplicaciones, métricas de servidor, seguimiento de errores con stack traces, monitoreo de uptime y alertas personalizadas. Incluye agregación de logs en tiempo real, trazado distribuido, dashboards personalizables con widgets drag-and-drop, gestión de incidentes e integración con GitHub, GitLab, Slack y PagerDuty."
     },
-    "technologies": ["React", "Firebase", "Material-UI"],
-    "github_url": "https://github.com/yourusername/taskapp",
-    "live_url": "https://taskapp.example.com",
-    "image_url": null,
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Go",
+      "TimescaleDB",
+      "InfluxDB",
+      "Elasticsearch",
+      "Grafana",
+      "Prometheus"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "image_url": "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg",
     "published": true,
-    "featured": false,
+    "featured": true,
     "position": 3
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Video Streaming & Course Platform",
+      "es": "Plataforma de Streaming de Video y Cursos"
+    },
+    "description": {
+      "en": "A Netflix-style video streaming platform optimized for educational content and online courses. Features include adaptive bitrate streaming, video transcoding, progress tracking, interactive quizzes, certificates, course enrollment management, instructor dashboard, student analytics, discussion forums, and live streaming capabilities. Supports multiple video qualities, subtitles, and offline download.",
+      "es": "Una plataforma de streaming de video estilo Netflix optimizada para contenido educativo y cursos en línea. Incluye streaming con bitrate adaptativo, transcodificación de video, seguimiento de progreso, cuestionarios interactivos, certificados, gestión de inscripciones a cursos, panel de instructor, análisis de estudiantes, foros de discusión y capacidades de transmisión en vivo. Soporta múltiples calidades de video, subtítulos y descarga offline."
+    },
+    "technologies": [
+      "React",
+      "Node.js",
+      "FFmpeg",
+      "AWS S3",
+      "CloudFront",
+      "MongoDB",
+      "Socket.io",
+      "Stripe",
+      "HLS"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "image_url": "https://images.pexels.com/photos/3774903/pexels-photo-3774903.jpeg",
+    "published": true,
+    "featured": true,
+    "position": 4
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Social Learning Network",
+      "es": "Red Social de Aprendizaje"
+    },
+    "description": {
+      "en": "A social network designed for developers and learners to share knowledge, ask questions, and collaborate on coding challenges. Features include Q&A system similar to Stack Overflow, code sharing with syntax highlighting, real-time collaborative coding rooms, skill-based matching, achievement badges, reputation system, job board integration, and peer code reviews. Users can create learning paths, share resources, and participate in coding challenges.",
+      "es": "Una red social diseñada para desarrolladores y estudiantes para compartir conocimiento, hacer preguntas y colaborar en desafíos de código. Incluye sistema de preguntas y respuestas similar a Stack Overflow, compartir código con resaltado de sintaxis, salas de codificación colaborativa en tiempo real, emparejamiento basado en habilidades, insignias de logros, sistema de reputación, integración con bolsa de trabajo y revisiones de código entre pares. Los usuarios pueden crear rutas de aprendizaje, compartir recursos y participar en desafíos de programación."
+    },
+    "technologies": [
+      "React",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "ElasticSearch",
+      "Redis",
+      "WebSockets",
+      "Monaco Editor",
+      "Docker"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "image_url": "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg",
+    "published": true,
+    "featured": true,
+    "position": 5
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "Multi-Tenant SaaS Boilerplate",
+      "es": "Plantilla SaaS Multi-Tenant"
+    },
+    "description": {
+      "en": "A production-ready SaaS starter kit with multi-tenancy architecture, featuring complete authentication (email, social logins, 2FA), subscription billing with Stripe, team management with role-based access control, admin dashboard, customer portal, email notifications, audit logs, API with rate limiting, comprehensive testing suite, CI/CD pipeline, and deployment configurations. Includes dark mode, i18n support, and extensive documentation for rapid SaaS development.",
+      "es": "Un kit inicial SaaS listo para producción con arquitectura multi-tenant, que incluye autenticación completa (email, logins sociales, 2FA), facturación por suscripción con Stripe, gestión de equipos con control de acceso basado en roles, panel de administración, portal de cliente, notificaciones por email, logs de auditoría, API con limitación de tasa, suite de pruebas completa, pipeline CI/CD y configuraciones de despliegue. Incluye modo oscuro, soporte i18n y documentación extensa para desarrollo rápido de SaaS."
+    },
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth.js",
+      "Stripe",
+      "Tailwind CSS",
+      "Jest",
+      "Playwright",
+      "GitHub Actions"
+    ],
+    "github_url": null,
+    "live_url": null,
+    "image_url": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+    "published": true,
+    "featured": true,
+    "position": 6
   }
 ]
